@@ -1,0 +1,20 @@
+%Ejercicio 2. Calcula las siguientes integrales impropias.
+syms x y a b c
+%a)
+f=1/(x^2-1)
+int(f,x,2,inf)
+%b)
+f=1/(x*log(x)^2)
+double(int(f,x,exp(1),inf))
+%c)
+f=x*exp(x)
+int(f,x,-inf,0)
+%d)
+f=1/(x^2+1)
+int(f,x,-inf,inf)
+%e)
+f=x/sqrt(x^2-9)
+int(f,x,3,5)
+%f)
+f=sin(x)
+int(f,x,-inf,inf) %NaN == No existe.

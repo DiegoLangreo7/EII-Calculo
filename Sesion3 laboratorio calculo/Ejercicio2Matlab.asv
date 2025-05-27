@@ -1,0 +1,36 @@
+syms t
+f=((exp(1/2-1/t))/t)
+pretty(f)
+df=diff(f)
+pretty(df)
+%Hallar en que valor de x esta el maximo:
+solve(df,t)
+%Con MAX en x=1, cual es el valor de y?
+subs(f,1)
+%Entonces, MAX en x=1 e y=exp(-1/2)
+
+subs(df,x,0)
+simplify(subs(df,x,0))
+
+ezplot(f,[-5,10])
+grid on
+
+d2f=diff(df)
+pretty(d2f)
+s=solve(d2f,t)
+double(s)
+%calcular concavidad:
+subs(d2f,0.2)
+subs(d2f,0.5)
+subs(d2f,2)
+
+%Calculamos A.V.:
+limit(f,t,0,'right')
+%Da igual a 0, por tanto f esta contenida en 0.
+
+%Calculamos A.O.:
+m=limit(f/t,t,inf)
+n=limit(f-m*t,t,inf)
+%No hay asintota oblicua
+
+limit

@@ -1,0 +1,29 @@
+syms x
+f=(x+(1/(x-2)))
+pretty(f)
+df=diff(f)
+pretty(df)
+solve(df,x)
+
+subs(df,x,0)
+subs(df,x,3/2)
+subs(df,x,5/2)
+subs(df,x,4)
+
+ezplot(f,[-10,10])
+grid on
+%MIN=3;MAX=1
+
+d2f=diff(df)
+pretty(d2f)
+solve(d2f,x)
+
+limit(f,x,2,'right')
+limit(f,x,2,'left')
+%ASINTOTA VERTICAL EN X=2
+
+m=limit(f/x,x,inf)
+n=limit(f-m*x,x,inf)
+%ASINTOTA OBLICUA EN Y=X
+
+solve(f,x)

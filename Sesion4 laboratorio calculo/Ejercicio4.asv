@@ -1,0 +1,27 @@
+%Ejercicio 3. Representa graficamente y halla el área de la
+%región limitada por la gráfica de la función.
+syms x y a b c
+f=(x+1)/(x^2+x+1); pretty(f)
+l1=limit(f,x,0)
+%ans = 0
+l2=limit(f,x,1)
+%ans = 0
+%Hay una asintota horizontal en y = 0
+solve(f,x)
+%ans = -1
+%Corta a la asintota en -1
+ezplot(f,[0,1]) %intervalo cualquiera
+hold on
+ezplot('-1',[0,1])
+grid on
+hold off
+x1=0:0.01:1
+x2=1:-0.01:0
+y1=(x1+1)./(x1.^2+x1+1)
+y2=ones(size(x2))
+xn=[x1 x2]
+yn=[y1 y2]
+patch(xn,yn,'r')
+area = int(f,x,0,1)
+
+

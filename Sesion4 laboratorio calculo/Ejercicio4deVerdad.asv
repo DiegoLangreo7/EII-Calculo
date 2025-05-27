@@ -1,0 +1,7 @@
+%Ejercicio 4. Representa gráficamente la región y las rectas
+%y=x, x=0 y x=5.
+syms x y a b c
+f=(x-1)/(x+1)^2 ; pretty(f)
+limit(f,x,inf)
+limit(f,x,-inf)
+%Hay asintota horizontal en 0

@@ -1,0 +1,9 @@
+% a)
+% syms x
+% limit((exp(-x)-1)/x,x,0)
+% ans = -1 
+
+
+%b)
+syms x 
+limit((
