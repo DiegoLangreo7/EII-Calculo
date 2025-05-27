@@ -38,5 +38,6 @@ Cómo ejecutar
 
 Puedes ejecutar los demás scripts de cada carpeta para reproducir todos los ejercicios de la sesión.
 
+---
 ## Autor
-[Diego García González](https://github.com/DiegoLangreo7)
+[DiegoLangreo7](https://github.com/DiegoLangreo7)
